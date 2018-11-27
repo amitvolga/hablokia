@@ -12,8 +12,6 @@ class Gallery extends Component {
         <MediaCard />
         <MediaCard />
         <MediaCard />
-        <MediaCard />
-
       </div >
     );
   }

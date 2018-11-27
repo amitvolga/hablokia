@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Toolbar from './components/Toolbar/Toolbar.js';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
-import Routering from './components/Routering'
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Gallery from './components/Gallery';
+import User from './components/User';
+import Home from './components/Home';
 
 class App extends Component {
 
@@ -23,18 +25,21 @@ class App extends Component {
   }
 
   render() {
-
-    let backdrop;
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backDropClickHndler} />;
-    }
+    const { sideDrawerOpen } = this.state;
     return (
       <div style={styles.container}>
-        <Routering>
-          <Toolbar drawerClickHandler={this.drawerToggleClicklHandler} />
-          <SideDrawer show={this.state.sideDrawerOpen} />
-          {backdrop}
-        </Routering>
+        <Router>
+          <div>
+            <Toolbar drawerClickHandler={this.drawerToggleClicklHandler} />
+            <SideDrawer show={sideDrawerOpen} />
+            {sideDrawerOpen && <Backdrop click={this.backDropClickHndler} />}
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/User" component={User} />
+              <Route path="/Gallery" component={Gallery} />
+            </Switch>
+          </div>
+        </Router>
       </div >
     );
   }

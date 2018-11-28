@@ -13,12 +13,18 @@ import Typography from '@material-ui/core/Typography';
 const styles = {
   card: {
     margin: 30,
-    maxWidth: 345,
+    maxWidth: 400,
+    boxShadow: "30px 30px 30px lightgrey"
+
   },
   media: {
-    height: 140,
+    height: 180,
+  },
+  CardContent: {
+    direction: "rtl",
   },
 };
+
 
 function MediaCard(props) {
   const { classes } = props;
@@ -27,12 +33,12 @@ function MediaCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
+          image={require('C:/Users/avishay/Development/React Projects/hh/hablokia/src/newyork.jpg')}
+        // title="Contemplative Reptile"
         />
-        <CardContent>
+        <CardContent className={classes.CardContent}>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            ניו יורק
           </Typography>
           <Typography component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -40,14 +46,14 @@ function MediaCard(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small" color="primary">
           Share
         </Button>
         <Button size="small" color="primary">
           Learn More
         </Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -14,6 +14,7 @@ const styles = {
   card: {
     margin: 30,
     maxWidth: 400,
+    minWidth: 400,
     boxShadow: "30px 30px 30px lightgrey"
 
   },
@@ -25,28 +26,37 @@ const styles = {
   },
 };
 
+class MediaCard extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-function MediaCard(props) {
-  const { classes } = props;
-  return (
-    <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={require('C:/Users/avishay/Development/React Projects/hh/hablokia/src/newyork.jpg')}
-        // title="Contemplative Reptile"
-        />
-        <CardContent className={classes.CardContent}>
-          <Typography gutterBottom variant="h5" component="h2">
-            ניו יורק
-          </Typography>
-          <Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      {/* <CardActions>
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <Card className={classes.card}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={require('C:/Users/avishay/Development/React Projects/hh/hablokia/src/newYork_downTown.jpg')}
+          // image={require(this.props.cardImagePath)}
+          // title="Contemplative Reptile"
+
+          />
+          <CardContent className={classes.CardContent}>
+            <Typography gutterBottom variant="h5" component="h2">
+              {/* ניו יורק */}
+              {this.props.cardSubject}
+            </Typography>
+            <Typography component="p">
+              {/* Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+              across all continents except Antarctica */}
+              {this.props.cardDescription}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        {/* <CardActions>
         <Button size="small" color="primary">
           Share
         </Button>
@@ -54,8 +64,9 @@ function MediaCard(props) {
           Learn More
         </Button>
       </CardActions> */}
-    </Card>
-  );
+      </Card>
+    );
+  }
 }
 
 MediaCard.propTypes = {

@@ -10,6 +10,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 
+
+
 const styles = {
   card: {
     margin: 30,
@@ -29,30 +31,31 @@ const styles = {
 class MediaCard extends Component {
   constructor(props) {
     super(props);
+
+
   }
 
   render() {
-    const { classes } = this.props;
+    console.log(this.props);
+    const { classes, cardImagePath, cardSubject, cardDescription } = this.props;
 
     return (
       <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image={require('C:/Users/avishay/Development/React Projects/hh/hablokia/src/newYork_downTown.jpg')}
-          // image={require(this.props.cardImagePath)}
-          // title="Contemplative Reptile"
+            image={cardImagePath}
 
           />
           <CardContent className={classes.CardContent}>
             <Typography gutterBottom variant="h5" component="h2">
               {/* ניו יורק */}
-              {this.props.cardSubject}
+              {cardSubject}
             </Typography>
             <Typography component="p">
               {/* Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
               across all continents except Antarctica */}
-              {this.props.cardDescription}
+              {cardDescription}
             </Typography>
           </CardContent>
         </CardActionArea>

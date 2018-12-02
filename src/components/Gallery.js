@@ -12,18 +12,14 @@ class Gallery extends Component {
     }
   }
 
-
   render() {
     return (
       <div className="gallery">
-
         {this.state.mediaCardProperties.map(item =>
-          <div>
-            <MediaCard
-              cardSubject={item.cardSubject}
-              cardDescription={item.cardDescription}
-              cardImagePath={item.cardImagePath} />
-          </div>
+          <MediaCard
+            cardSubject={item.cardSubject}
+            cardDescription={item.cardDescription}
+            cardImagePath={item.cardImagePath} />
         )
         }
         {/* <div>

@@ -1,49 +1,40 @@
 
 import React, { Component } from 'react';
-import img from '../newYork_homePage.jpg';
+import img from '../media/images/newYork_homePage.jpg';
 import './Home.css';
 import MediaCard from './MediaCard';
+
+import MediaCardHomePage from '../MediaCardHomePage.json'
+
 
 class home extends Component {
   constructor() {
     super();
     this.state = {
-      cardSubject: 'newyork',
-      cardDescription: 'city',
-      cardImagePath: 'C:/Users/avishay/Development/React Projects/hh/hablokia/src/newyork.jpg'
+      MediaCardHomePage: MediaCardHomePage
     }
   }
   render() {
     return (
       <div className="home">
         <img className="homeImage" src={img} />
-        <div className="cardTyps">
-        </div>
+        <div className="typeTitle" >כל הסוגים</div>
         <div className="homeMediaCards">
-          <div>
-            <h1>סוג 1</h1>
-            <MediaCard
-              cardSubject={this.state.cardSubject}
-              cardDescription={this.state.cardDescription}
-              cardImagePath={this.state.cardImagePath} />
-          </div>
-          <div>
-            <h1>סוג 2</h1>
-            <MediaCard
-              cardSubject={this.state.cardSubject}
-              cardDescription={this.state.cardDescription}
-              cardImagePath={this.state.cardImagePath} />
-          </div>
-          <div>
-            <h1>סוג 3</h1>
-            <MediaCard
-              cardSubject={this.state.cardSubject}
-              cardDescription={this.state.cardDescription}
-              cardImagePath={this.state.cardImagePath} />
-          </div>
+          {this.state.MediaCardHomePage.map(item =>
+            <div className="cardTyps">
+              <h2> {item.type}</h2>
+              <MediaCard
+                cardSubject={item.cardSubject}
+                cardDescription={item.cardDescription}
+                cardImagePath={item.cardImagePath} />
+
+            </div>
+          )
+          }
         </div>
-      </div>
+      </div >
     );
   }
 }
 export default home;
+

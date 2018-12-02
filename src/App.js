@@ -34,7 +34,7 @@ class App extends Component {
             <SideDrawer show={sideDrawerOpen} />
             {sideDrawerOpen && <Backdrop click={this.backDropClickHndler} />}
             <Switch>
-              {/* <Route exact path="/" component={Home} /> */}
+              <Route exact path="/" component={Home} />
               <Route path="/Home" component={Home} />
               <Route path="/User" component={User} />
               <Route path="/Gallery" component={Gallery} />

@@ -3,15 +3,21 @@ import React, { Component } from 'react';
 import img from '../media/images/newYork_homePage.jpg';
 import './Home.css';
 import MediaCard from './MediaCard';
+import ReasonToChooseUs from './ReasonToChooseUs';
 
 import MediaCardHomePage from '../MediaCardHomePage.json'
+import Reasons from '../Reasons'
+
+
 
 
 class home extends Component {
   constructor() {
     super();
     this.state = {
-      MediaCardHomePage: MediaCardHomePage
+      MediaCardHomePage: MediaCardHomePage,
+      Reasons: Reasons
+
     }
   }
   render() {
@@ -27,12 +33,23 @@ class home extends Component {
                 cardSubject={item.cardSubject}
                 cardDescription={item.cardDescription}
                 cardImagePath={item.cardImagePath} />
-
             </div>
           )
           }
         </div>
-      </div >
+        <div className="whyReasonTitle" >למה ניו יורק ?</div>
+        <div className="reasonToChooseUs" >
+
+          {this.state.Reasons.map(item =>
+            <ReasonToChooseUs
+              reasonSubject={item.reasonSubject}
+              reasonDescription={item.reasonDescription}
+            // cardImagePath={item.cardImagePath} 
+            />
+          )
+          }
+        </div>
+      </div>
     );
   }
 }

@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "cardSubject": "Downtown",
+      "cardDescription": "city",
+      "cardImagePath": "https://www.nyctourist.com/sites/default/files/billboard/downtown-walking-tour-by-manhattan_C.jpg"
+    },
+    {
+      "id": 2,
+      "cardSubject": "Down Twon",
+      "cardDescription": "city",
+      "cardImagePath": "https://i2.wp.com/secretnyc.co/wp-content/uploads/2016/05/Majestic-Statue-of-Liberty-in-USA-4.jpg?fit=666%2C388&ssl=1"
+    },
+    {
+      "id": 3,
+      "cardSubject": "Statue Of Liberty",
+      "cardDescription": "city",
+      "cardImagePath": "https://www.dentons.com/-/media/images/website/background-images/offices/new-york/new_york_opt_02.jpg"
+    },
+    {
+      "id": 4,
+      "cardSubject": "Central Park",
+      "cardDescription": "city",
+      "cardImagePath": "https://img.as-creation.com/s0/4706024.jpg"
+    }
+  ]
+}

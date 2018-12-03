@@ -45,7 +45,6 @@ class MediaCard extends Component {
           <CardMedia
             className={classes.media}
             image={cardImagePath}
-
           />
           <CardContent className={classes.CardContent}>
             <Typography gutterBottom variant="h5" component="h2">

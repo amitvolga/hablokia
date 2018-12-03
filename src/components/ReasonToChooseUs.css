@@ -1,0 +1,11 @@
+.reasonBox{
+  margin: 0 auto;
+  margin-top: 5px;
+  direction: rtl;
+  height: 8vh;
+  background: #F2F2F2;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #fff inset,
+              -1px -1px 2px #fff inset;
+  border-radius: 3px/6px;        
+}

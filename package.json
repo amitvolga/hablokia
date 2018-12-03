@@ -5,7 +5,9 @@
   "dependencies": {
     "@material-ui/core": "^3.5.1",
     "@version/react-router-v3": "^1.0.0",
+    "faker": "^4.1.0",
     "jquery": "^3.3.1",
+    "json-server": "^0.14.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
@@ -18,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "json:server": "json-server --watch MediaCardProperties.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +34,17 @@
   ],
   "devDependencies": {
     "mimic": "^2.0.9"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitvolga/hablokia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitvolga/hablokia/issues"
+  },
+  "homepage": "https://github.com/amitvolga/hablokia#readme"
 }

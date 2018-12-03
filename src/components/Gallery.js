@@ -2,19 +2,22 @@ import React, { Component } from 'react';
 import MediaCard from './MediaCard';
 import './Gallery.css';
 import MediaCardProperties from '../MediaCardProperties.json'
+import { createGenerateClassName } from '@material-ui/core';
 
 
 class Gallery extends Component {
   constructor() {
     super();
     this.state = {
-      mediaCardProperties: MediaCardProperties
-    }
-  }
+      mediaCardProperties: MediaCardProperties,
 
+    };
+
+  }
   render() {
     return (
-      <div className="gallery">
+
+      <div className="gallery" >
         {this.state.mediaCardProperties.map(item =>
           <MediaCard
             cardSubject={item.cardSubject}
@@ -22,20 +25,7 @@ class Gallery extends Component {
             cardImagePath={item.cardImagePath} />
         )
         }
-        {/* <div>
 
-          <MediaCard
-            cardSubject={this.state.cardSubject}
-            cardDescription={this.state.cardDescription}
-            cardImagePath={this.state.cardImagePath} />
-        </div>
-        <div>
-
-          <MediaCard
-            cardSubject={this.state.cardSubject}
-            cardDescription={this.state.cardDescription}
-            cardImagePath={this.state.cardImagePath} />
-        </div> */}
       </div>
     );
   }

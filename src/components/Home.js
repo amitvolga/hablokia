@@ -44,7 +44,7 @@ class home extends Component {
             <ReasonToChooseUs
               reasonSubject={item.reasonSubject}
               reasonDescription={item.reasonDescription}
-            // cardImagePath={item.cardImagePath} 
+              reasonImage={item.reasonImage}
             />
           )
           }

@@ -9,15 +9,15 @@ class reasonToChooseUs extends Component {
   }
 
 
-
-
   render() {
-    const { reasonSubject, reasonDescription } = this.props;
+    const { reasonSubject, reasonDescription, reasonImage } = this.props;
     return (
       <div className="reasonBox">
-        {reasonSubject}
-       {reasonDescription}
-      
+        <img className="homeIdmage" src={reasonImage} />
+        <div>
+          <p><b>{reasonSubject}</b></p>
+          <p>{reasonDescription}</p>
+        </div>
       </div>
     );
   }

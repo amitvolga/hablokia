@@ -18,11 +18,12 @@ const styles = {
     maxWidth: 400,
     minWidth: 400,
     boxShadow: "30px 30px 30px lightgrey"
-
   },
+
   media: {
     height: 180,
   },
+
   CardContent: {
     direction: "rtl",
   },
@@ -31,8 +32,6 @@ const styles = {
 class MediaCard extends Component {
   constructor(props) {
     super(props);
-
-
   }
 
   render() {

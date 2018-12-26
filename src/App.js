@@ -7,7 +7,7 @@ import Gallery from './components/Gallery';
 import User from './components/User';
 import Home from './components/Home';
 
-class App extends Component {
+class App extends Component { 
 
   state = {
     sideDrawerOpen: false

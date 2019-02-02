@@ -24,7 +24,7 @@ class home extends Component {
     return (
       <div className="home">
         <img className="homeImage" src={img} />
-        <div className="typeTitle" >כל הסוגים</div>
+        <div className="typeTitle" >כל המבצעים</div>
         <div className="homeMediaCards">
           {this.state.MediaCardHomePage.map(item =>
             <div className="cardTyps">
@@ -37,7 +37,7 @@ class home extends Component {
           )
           }
         </div>
-        <div className="whyReasonTitle" >למה ניו יורק ?</div>
+        <div className="whyReasonTitle" >למה אנחנו ?</div>
         <div className="reasonToChooseUs" >
 
           {this.state.Reasons.map(item =>

@@ -1,20 +1,21 @@
 [
   {
-    "type": "סוג 1",
-    "cardSubject": "Downtown",
-    "cardDescription": "city",
+    "type": "מבצע 100",
+    "cardSubject": "4 בלוקים בגודל 9*9",
+    "cardDescription": "100 שח",
     "cardImagePath": "https://www.nyctourist.com/sites/default/files/billboard/downtown-walking-tour-by-manhattan_C.jpg"
   },
   {
-    "type": "סוג 2",
-    "cardSubject": "Down Twon",
-    "cardDescription": "city",
+    "type": "מבצע 200",
+    "cardSubject": "4 בלוקים בגודל 9*9",
+    "cardDescription": "100 שח",
     "cardImagePath": "https://i2.wp.com/secretnyc.co/wp-content/uploads/2016/05/Majestic-Statue-of-Liberty-in-USA-4.jpg?fit=666%2C388&ssl=1"
   },
   {
-    "type": "סוג 2",
-    "cardSubject": "Statue Of Liberty",
-    "cardDescription": "city",
+    "type": "מבצע 250",
+   "cardSubject": "4 בלוקים בגודל 9* 9 + 2 בלוקים בגודל 18*18 + 1 בלוק ענק בגודל 18*28",
+    "cardDescription": "250 שח",
     "cardImagePath": "https://www.dentons.com/-/media/images/website/background-images/offices/new-york/new_york_opt_02.jpg"
   }
 ]
+
